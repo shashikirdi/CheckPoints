@@ -1,0 +1,17 @@
+CREATE DATABASE [device]
+
+USE device
+ DROP TABLE dbo.device
+
+CREATE TABLE [dbo].[device](
+	[DeviceID] [int] NOT NULL IDENTITY(1,1),
+	[Name] [nvarchar](max) NULL,
+	[Model] [nvarchar](max) NULL,
+	[Purchase_Date] [datetime2](7) NOT NULL,
+	[Price] [nvarchar](max) NULL,
+	[Office] [nvarchar](max) NULL,
+	[Type] [nvarchar](max) NULL,
+ CONSTRAINT [PK_Device] PRIMARY KEY CLUSTERED 
+(
+	[DeviceID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY])
